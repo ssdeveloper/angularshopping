@@ -15,10 +15,16 @@ angular.module("shopApp", ["ui.router"])
             return deferred.promise;
         }
     })
-    .controller("productsCtrl", ["$scope", "productService", function($scope, productService) {
+    .controller("productsCtrl", ["$rootScope", "$scope", "productService", function($rootScope, $scope, productService) {
+        $rootScope.cart = $rootScope.cart || [];
+
         $scope.addToCart = function(id) {
-            console.log(id);
+            var item = _.where($scope.items, {id: id});
+            var qtyElId = "#" + id + "_order_qty";
+            item[0].order_qty = $(qtyElId).val();
+            $rootScope.cart.push(item[0]);
         }
+
         // Get the list of products
         productService.getAllItems()
             .then(function(data) {
@@ -29,8 +35,8 @@ angular.module("shopApp", ["ui.router"])
                 $scope.items = items;
             });
     }])
-    .controller("cartCtrl", ["$scope", function($scope) {
-
+    .controller("cartCtrl", ["$rootScope", "$scope", function($rootScope, $scope) {
+        $scope.cart = $rootScope.cart;
     }])
     .config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
         $stateProvider

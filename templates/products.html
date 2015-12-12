@@ -5,7 +5,7 @@
         <div class="col-md-12">
             {{item.name}}
             ${{item.price}}
-            Qty: <input type="number" min="0" max="{{item.qty}}" />
+            Qty: <input id="{{item.id}}_order_qty" type="number" min="0" max="{{item.avail_qty}}" />
             <input type="button" ng-click="addToCart(item.id)" value="Add to cart" />
         </div>
     </div>

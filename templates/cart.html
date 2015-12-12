@@ -1,12 +1,21 @@
 <h3>Items in my shopping cart:</h3>
 
-<div ng-repeat="item in items">
+<span class="">
+    <a ui-sref="products">Continue Shopping</a>
+</span>
+
+<div ng-repeat="item in cart">
     <div class="row product">
         <div class="col-md-12">
             {{item.name}}
             ${{item.price}}
-            Qty: <input type="number" min="0" max="{{item.qty}}" />
+            Qty: {{item.qty}}
+            Total: {{ item.qty * item.price }}
             <input type="button" ng-click="removeFromCart(item.id)" value="Remove from cart" />
         </div>
     </div>
 </div>
+
+<br>
+<br>
+<input type="button" value="Review Order" />

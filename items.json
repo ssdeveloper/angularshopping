@@ -1,9 +1,9 @@
 {
   "products":
   [
-    {"id": "08347", "name": "apple", "qty": 10, "price": ".11"},
-    {"id": "20484", "name": "orange", "qty": 20, "price": ".15"},
-    {"id": "55361", "name": "pear", "qty": 14, "price": ".12"},
-    {"id": "97003", "name": "tomato", "qty": 5, "price": ".09"}
+    {"id": "08347", "name": "apple", "avail_qty": 10, "price": ".11"},
+    {"id": "20484", "name": "orange", "avail_qty": 20, "price": ".15"},
+    {"id": "55361", "name": "pear", "avail_qty": 14, "price": ".12"},
+    {"id": "97003", "name": "tomato", "avail_qty": 5, "price": ".09"}
   ]
 }
