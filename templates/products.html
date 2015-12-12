@@ -1,0 +1,12 @@
+<h3>Fresh fruits and vegetables</h3>
+
+<div ng-repeat="item in items">
+    <div class="row product">
+        <div class="col-md-12">
+            {{item.name}}
+            ${{item.price}}
+            Qty: <input type="number" min="0" max="{{item.qty}}" />
+            <input type="button" ng-click="addToCart(item.id)" value="Add to cart" />
+        </div>
+    </div>
+</div>

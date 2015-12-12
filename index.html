@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shopApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Shopping Demo</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="home">Shopping Demo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="products">Products</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a ui-sref="cart">My Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mainContent" class="container-fluid">
+
+        <ui-view></ui-view>
+
+    </div>
+</body>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</html>
