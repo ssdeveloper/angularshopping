@@ -8,9 +8,9 @@
     <div class="row product">
         <div class="col-md-12">
             {{item.name}}
-            ${{item.price}}
-            Qty: {{item.qty}}
-            Total: {{ item.qty * item.price }}
+            Price:  {{item.price | currency}}
+            Qty:  {{item.order_qty}}
+            Total:  {{ item.order_qty * item.price | currency }}
             <input type="button" ng-click="removeFromCart(item.id)" value="Remove from cart" />
         </div>
     </div>
