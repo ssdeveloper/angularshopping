@@ -1,6 +1,14 @@
 <h3>Fresh fruits and vegetables</h3>
-
-<div ng-repeat="item in items">
+<br>
+    <div class="row pull-right">
+        <div class="col-md-12">
+            <label for="search">Search: </label>
+            <input id="search" type="text" ng-model="search" />
+        </div>
+    </div>
+<br>
+<br>
+<div ng-repeat="item in items | filter:search">
     <div class="row product">
         <div class="col-md-12">
             {{item.name}}
