@@ -1,13 +1,18 @@
+$std-margin: 25px;
+
 .link a {
   color: red;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 h3 {
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
 #toast {
-  margin-right: 25px;
-  margin-left: 25px; }
+  margin-right: $std-margin;
+  margin-left: $std-margin;
+}
 
 .product {
   border-top: 1px black solid;
@@ -15,29 +20,36 @@ h3 {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 10px;
-  margin-left: 25px;
-  margin-right: 25px; }
+  margin-left: $std-margin;
+  margin-right: $std-margin;
+}
 
 #search {
-  margin-right: 25px; }
+  margin-right: $std-margin;
+}
 
 .item_list {
-  background: lightgoldenrodyellow; }
+  background: lightgoldenrodyellow;
+}
 
 .desc {
-  font-style: italic; }
+  font-style: italic;
+}
 
 .grand_total {
   font-style: italic;
   font-weight: bold;
   font-size: large;
-  margin-right: 25px; }
+  margin-right: $std-margin;
+}
 
 footer {
   text-align: center;
-  margin-top: 25px; }
+  margin-top: 25px;
+}
 
 #submittedMessage {
   color: white;
   background: green;
-  font-size: larger; }
+  font-size: larger;
+}
