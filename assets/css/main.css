@@ -1,10 +1,20 @@
-.jumbo_link a {
+.link a {
     color: red;
     text-decoration: none;
 }
 
+h3 {
+    text-decoration: underline;
+}
+
+#toast {
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
 .product {
-    border: 1px black solid;
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 10px;
@@ -14,4 +24,30 @@
 
 #search {
     margin-right: 25px;
+}
+
+.item_list {
+    background: lightgoldenrodyellow;
+}
+
+.desc {
+    font-style: italic;
+}
+
+.grand_total {
+    font-style: italic;
+    font-weight: bold;
+    font-size: large;
+    margin-right: 25px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+}
+
+#submittedMessage {
+    color: white;
+    background: green;
+    font-size: larger;
 }

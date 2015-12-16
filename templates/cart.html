@@ -1,21 +1,25 @@
 <h3>Items in my shopping cart:</h3>
 
-<span class="">
+<span class="link">
     <a ui-sref="products">Continue Shopping</a>
 </span>
-
+<br>
+<br>
 <div ng-repeat="item in cart">
     <div class="row product">
         <div class="col-md-12">
-            {{item.name}}
-            Price:  {{item.price | currency}}
-            Qty:  {{item.order_qty}}
-            Total:  {{ item.order_qty * item.price | currency }}
-            <input type="button" ng-click="removeFromCart(item.id)" value="Remove from cart" />
+            {{item.name}}  &nbsp; &nbsp; Price:  {{item.price | currency}}
+            <input type="button" class="btn btn-danger pull-right" ng-click="removeFromCart(item.id)" value="Remove from cart" />
+            <br>
+            Qty:  <input id="{{item.id}}_order_qty" type="number" ng-model="item.order_qty" ng-change="calcTotal()" value="{{item.order_qty}}"  min="0" max="{{item.avail_qty}}" />
+            <br>
+            <span class="pull-right">Sub-total:  {{ item.order_qty * item.price | currency }} </span>
         </div>
     </div>
 </div>
-
 <br>
 <br>
-<input type="button" value="Review Order" />
+<span class="grand_total pull-right" ng-show="cart.length > 0" class="cart_total">Grand Total: {{grand_total | currency}}</span>
+<br>
+<br>
+<input ng-show="cart.length > 0" ng-click="submitOrder()" type="button" class="btn btn-success" value="Submit Order" />
